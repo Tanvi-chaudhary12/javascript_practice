@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>cricket game </title>
+    <style>
+       body {
+       text-align: center;
+       }
+    </style>
+</head>
+<body>
+   <h1>choose one option</h1> 
+   <button onclick="
+   
+   let randomNumber =Math.random() * 3;
+   let computerChoice;
+   if(randomNumber > 0 && randomNumber <= 1){
+    computerChoice ='Bat';
+   }else if (randomNumber > 1 && randomNumber <=2){
+    computerChoice='Ball';
+   }else{
+    computerChoice='Stump';
+   }
+   
+
+   let resultMsg;
+   
+   if(computerChoice === 'Ball'){
+    resultMsg='user won.';
+   }else if(computerChoice==='Bat'){
+    resultMsg='tie';
+   }else if (computerChoice==='Stump'){
+    resultMsg = 'computer won .';
+   }
+
+   alert(`You have chosen bat. Computer choice is ${computerChoice} and ${resultMsg}`)
+   ">bat</button>
+
+
+   <button onclick="
+    let randomNumber =Math.random() * 3;
+    let computerChoice;
+   if(randomNumber > 0 && randomNumber <= 1){
+    computerChoice ='Bat';
+   }else if (randomNumber > 1 && randomNumber <=2){
+    computerChoice='Ball';
+   }else{
+    computerChoice='Stump'
+   }
+   
+
+    let resultMsg;
+    
+
+   if(computerChoice === 'Ball'){
+    resultMsg=`it's a tie.`;
+   }else if(computerChoice==='Bat'){
+    resultMsg='computer won';
+   }else if (computerChoice==='Stump'){
+   resultMsg = 'user won .';
+   }
+
+   alert(`You have chosen ball . Computer choice is ${computerChoice} and ${resultMsg}`)
+   
+   
+   
+   ">ball</button>
+
+
+   <button onclick="
+    let randomNumber =Math.random() * 3;
+    let computerChoice;
+   if(randomNumber > 0 && randomNumber <= 1){
+    computerChoice ='Bat';
+   }else if (randomNumber > 1 && randomNumber <=2){
+    computerChoice='Ball';
+   }else{
+    computerChoice='Stump'
+   }
+   
+
+    let resultMsg;
+
+   if(computerChoice === 'Ball'){
+    resultMsg='computer won.';
+   }else if(computerChoice==='Bat'){
+    resultMsg='user won';
+   }else if (computerChoice==='Stump'){
+    resultMsg = 'tie .';
+   }
+
+   alert(`You have chosen Stump. Computer choice is ${computerChoice} and ${resultMsg}`)
+   
+   ">stump</button>
+   
+   
+</body>
+</html>

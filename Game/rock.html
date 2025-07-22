@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>rock paper scissors</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>ROCK PAPER AND SCISSOR</h1>
+    <H4>choose one option </H4>
+    <button onclick="
+    let  computerChoice = generateComputerChoice();
+    let resultMSg= getResult('Rock',computerChoice);
+    showResult('Rock',computerChoice,resultMSg)
+     ">Rock</button>
+
+
+
+
+
+    <button onclick="
+    computerChoice = generateComputerChoice();
+
+    resultMSg= getResult('Paper',computerChoice);
+    showResult('Paper',computerChoice,resultMSg);
+        
+    
+
+    ">Paper</button>
+
+
+    
+
+
+    <button onclick="
+    computerChoice=generateComputerChoice();
+
+    resultMSg=getResult('Scissors',computerChoice);
+    showResult('Scissors',computerChoice,resultMSg);
+    
+
+    
+    
+    ">Scissor</button>
+
+    <script>
+
+        let score = {
+            won:0,
+            tie:0,
+            loss:0,
+            displayScore:function() {
+                return `WON: ${score.won} , LOSS:${score.loss} ,
+                TIE:${score.tie}`;
+            }
+
+
+  
+
+        };
+        function generateComputerChoice() {
+            let randomNumber=Math.random()*3;
+    
+            if(randomNumber > 0 && randomNumber <= 1){
+              return 'Rock';
+            }else if (randomNumber > 1 && randomNumber <=2){
+              return 'Paper';
+            }else{
+               return 'Scissors'
+            }
+        
+        }
+
+        function getResult(userMove,computerMove){
+        
+           
+            if(userMove=== 'Rock'){
+                if(computerMove==='Rock'){
+                    score.tie++
+                  return` it's a tie`;
+            }else if(computerMove==='Paper'){
+                score.loss++
+                  return 'computer won';
+            }else if(computerMove==='Scissors'){
+                score.won++
+                  return 'you won';
+
+            }
+
+            }
+
+            else if(userMove==='Paper'){
+                if(computerMove==='Rock'){
+                    score.won++;
+
+                  return 'you won';
+            }else if(computerMove==='Paper'){
+                score.tie++;
+
+                  return ` it's a tie`;
+            }else if(computerMove==='Scissors'){
+                score.loss++;
+
+                 return 'computer won';
+
+            }
+
+
+            }
+                
+           
+        
+         
+        
+         else{
+            if(computerMove==='Rock'){
+                score.won++
+                return 'you won';
+            }else if(computerMove==='Paper'){
+                score.loss++
+                 return 'computer won';
+            }else if(computerMove==='Scissors'){
+                score.tie++
+                 return ` it's a tie`;
+
+
+
+            }
+         }
+    }
+
+    function showResult(userMove,computerMove,result){
+        console.log(score);
+           alert(`you have chosen ${userMove}. computers choice is ${computerMove} and 
+           
+           ${result}
+           
+          ${score.displayScore()}`);
+
+    }
+
+
+
+
+    </script>
+       
+</body>
+</html>

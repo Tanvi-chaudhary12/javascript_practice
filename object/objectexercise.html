@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Exercise</title>
+</head>
+<body>
+    <script>
+        //create an object to represent a product from myntra
+        let product={
+            name:'jeans',
+            size:'S',
+            fit:'slim fit',
+            'delievery-time':'same day delievery',
+        };
+        
+  //create an object with two refrences and log changes to one object by changing another
+        // let copyProduct= product;
+        // console.log(product);
+        // copyProduct.size='M';
+        // console.log(product);
+        // copyProduct.fit='medium fit';
+        // console.log(product);
+    
+ //use bracket notation to access delievry time
+        // console.log(product['delivery-time']);
+
+
+ //de-structuring
+        // let object={
+        //     message:'Good Job',
+        //     status:'Complete',
+        // }
+
+        // let{message,status}=object;
+        // console.log(message);
+        // cosole.log(status);
+
+
+        //add function isidenticalproduct to compare two product objects
+        function isIdenticalProduct(product1,product2){
+            if(typeof product1!= 'object' || typeof product2!='object'){
+                console.warn(`parameter passed was not an object`);
+                return false;
+            }
+
+            if(product1==product2){
+                return true;
+            }
+
+            if(product1.name==product2.name && product1.size==product2.size && product1.fit==product2.fit ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        let product2={
+             name:'jeans',
+            size:'M',
+            fit:'slim fit',
+            'delievery-time':'same day delievery',
+        };
+
+        let product3={
+             name:'jeans',
+            size:'M',
+            fit:'slim fit',
+            'delievery-time':'same day delievery',
+        };
+
+
+        
+
+        console.log(isIdenticalProduct(product,""));
+        console.log(isIdenticalProduct(product,product2));
+        console.log(isIdenticalProduct(product2,product2));
+        console.log(isIdenticalProduct(product2,product3));
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
